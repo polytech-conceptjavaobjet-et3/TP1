@@ -537,30 +537,73 @@ public class Autotamponneuse
 	
 	// #1.11.1 définition de la classe PisteAutotamponneuses
 	
-	/* 12. Ajoutez une nouvelle méthode statique main dans la classe PisteAutotamponneuses pour définir un programme de test
-	 * qui crée le nombre d’autotamponneuses requis et les place de façon aléatoire sur la piste (cf. Math.random() ).
-	 * Faites en sorte qu’aucune autotamponneuse nouvellement placée ne soit en collision avec une autre autotamponneuse. */
+	/* (voir la classe PisteAutotamponeuses) */
+	
+	
+	/* 12. Ajoutez une nouvelle méthode statique main dans la classe
+	 * PisteAutotamponneuses pour définir un programme de test qui crée le
+	 * nombre d’autotamponneuses requis et les place de façon aléatoire sur la
+	 * piste (cf. Math.random()). Faites en sorte qu’aucune autotamponneuse
+	 * nouvellement placée ne soit en collision avec une autre autotamponneuse. */
+	
 	
 	// #1.12.1 méthode main
 	
+	/* (voir la classe PisteAutotamponeuses) */
+	
 	// #1.12.2 trace d'exécution de tests de création de piste
 	
-	/* 13. Redéfinissez la méthode String toString() de la classe PisteAutotamponneuses afin qu’elle affiche l’état de la collection complète (l’ordre des autotamponneuses sera par ordre d’ajout). Utilisez pour cela la classe java.lang.StringBuilder . */
+	/* (voir la classe PisteAutotamponeuses)
+	 * 
+	 * L'auto#0 a été ajoutée à la piste à la position (7.075965983441446;0.18777071254584055)
+	 * L'auto#1 a été ajoutée à la piste à la position (16.292292445070533;19.01305654595785)
+	 * L'auto#2 a été ajoutée à la piste à la position (2.2648264345048275;16.482561679822325)
+	 * L'auto#3 a été ajoutée à la piste à la position (5.119108606713207;16.159119640151307)
+	 * L'auto#4 a été ajoutée à la piste à la position (16.9197253095219;11.121848768213296)
+	 * Il y a une collision entre l'auto#5 et l'auto#0
+	 * L'auto#5 n'a pas été ajoutée à la piste à la position (5.222489098244476;0.021876973864454197)
+	 * L'auto#5 a été ajoutée à la piste à la position (18.27101302469375;7.318583992632277)
+	 * L'auto#6 a été ajoutée à la piste à la position (8.128346414004149;12.330410418583167)
+	 * L'auto#7 a été ajoutée à la piste à la position (11.51586340831395;9.989380784928665)
+	 * L'auto#8 a été ajoutée à la piste à la position (17.922929844518983;0.09908124019937237)
+	 * L'auto#9 a été ajoutée à la piste à la position (6.296561548173425;4.137730059549951)*/
+	
+	
+	/* 13. Redéfinissez la méthode String toString() de la classe
+	 * PisteAutotamponneuses afin qu’elle affiche l’état de la collection
+	 * complète (l’ordre des autotamponneuses sera par ordre d’ajout). Utilisez
+	 * pour cela la classe java.lang.StringBuilder. */
+	
 	
 	// #1.13.1 méthode toString
 	
+	/* (voir la classe PisteAutotamponeuses) */
+	
 	// #1.13.2 test d'utilisation de la méthode toString
 	
-	/* 14. Ajoutez une méthode dereglementAleatoire à la classe PisteAutotamponneuses qui déplace de façon aléatoire et continue chaque autotamponneuse encore pilotée tour à tour, et élimine les autotamponneuses entrées en collision. Cette méthode affichera l’historique des autotamponneuses éliminées, et le vainqueur (autotamponneuse survivante si elle existe).*/
+	/* (voir la classe PisteAutotamponeuses)
+	 * 
+	 * [1] (11.525433527779265;2.4383797042140443) libre / eteinte / non clignotante
+	 * [2] (13.523387177939544;19.940829272706853) libre / eteinte / non clignotante
+	 * [3] (15.70578405907482;18.72602897936526) libre / eteinte / non clignotante
+	 * [4] (18.040862640866028;10.594938484840227) libre / eteinte / non clignotante
+	 * [5] (18.0636220910922;7.031975505256016) libre / eteinte / non clignotante
+	 * [7] (2.7162909911908506;12.904550209615518) libre / eteinte / non clignotante
+	 * [9] (1.3681812725836817;18.359600454452814) libre / eteinte / non clignotante
+	 * [10] (13.836852044187467;8.289263479114076) libre / eteinte / non clignotante
+	 * [11] (3.7389128719596187;6.7463378349555825) libre / eteinte / non clignotante
+	 * [12] (9.452102060736117;4.253764133739157) libre / eteinte / non clignotante */
+	
+	
+	/* 14. Ajoutez une méthode dereglementAleatoire à la classe
+	 * PisteAutotamponneuses qui déplace de façon aléatoire et continue
+	 * chaque autotamponneuse encore pilotée tour à tour, et élimine les
+	 * autotamponneuses entrées en collision. Cette méthode affichera l’historique
+	 * des autotamponneuses éliminées, et le vainqueur (autotamponneuse survivante
+	 * si elle existe).*/
+	
 	
 	// #1.14.1 méthode dereglementAleatoire
 	
-	
-
- 
-
-
-
-
-	
+	/* (voir la classe PisteAutotamponeuses) */
 }
