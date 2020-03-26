@@ -18,53 +18,104 @@ Vous allez développer une gestion simple d’autotamponneuses. Celles-ci sont c
 
 > La classe est `public`, ce qui veut dire qu'elle est accessible depuis n'importe quel endroit du projet.
 > Les données ne sont visible que depuis la classe, elle sont donc `private`.
-> Ici, on travaille avec des types primitifs ([boolean, double](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)) et une classe des API standard ([String](https://docs.oracle.com/javase/9/docs/api/java/lang/String.html)).
+> Ici, on travaille avec des [types primitifs](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html) (boolean, double) et une classe des API standard ([String](https://docs.oracle.com/javase/9/docs/api/java/lang/String.html)).
 >
->```Java
->package com.feteforraine;
->
->public class Autotamponneuse 
->{
->	private boolean placee = false;
->	private double[] position = new double[2];
->  
->	private boolean occupee = false;
->	private String nomOccupant = "";
->	
->	private boolean allumee = false;
->	
->	private boolean clignotante = false;
->}
->```
+> ```Java
+> package com.feteforraine;
+> 
+> public class Autotamponneuse 
+> {
+> 	private boolean placee = false;
+> 	private double[] position = new double[2];
+>   
+> 	private boolean occupee = false;
+> 	private String nomOccupant = "";
+> 	
+> 	private boolean allumee = false;
+> 	
+> 	private boolean clignotante = false;
+> }
+> ```
 
 1#2. Ajoutez deux constructeurs à la classe : l’un sans paramètres, l’autre avec une coordonnée x et une coordonnée y. Faites en sorte de réutiliser ce qui peut l’être dans vos constructeurs.
 
 - 1#2.1 constructeur sans paramètres : 
 
-```Java
-
-```
+> ```Java
+> public Autotamponneuse()
+> {
+> 		this.occupee = false;
+> 		this.allumee = false;
+> 		this.clignotante = false;
+> 		this.placee = false;
+> 		this.position[0] = 0.0d;
+> 		this.position[1] = 0.0d;
+> 		this.nomOccupant = "";
+> }
+> ```
 
 - 1#2.2 constructeur avec 2 paramètres :
 
-```Java
-
-```
+> ```Java
+> public Autotamponneuse(double positionX, double positionY)
+> 	{
+> 		this();
+> 		this.placee = true;
+> 		this.position[0] = positionX;
+> 		this.position[1] = positionY;
+> 	}
+> ```
+> 
+> Ici, `this()` renvoie au constructeur sans paramètre
 
 - 1#2.3 Pour quelles raisons aurait-on intérêt à réutiliser (invoquer) d'autres constructeurs lorsqu'on définit des constructeurs ?
 
-```Java
-
-```
+> Cela peut être utile si:
+> - on veut donner des valeurs par défaut à notre Autotamponeuse (exemple : si l'autotamponeuse est occupée, elle est automatiquement clignotante)
+> - on veut définir manuellement d'autres paramètre (exemple : l'utilisateur peut choisir si l'autotamponeuse est clignotante ou non à sa création)
 
 1#3. Ajoutez des méthodes d’instance dans la classe Autotamponneuse pour consulter l’état d’une
 autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClignotante.
 
 - 1#3.1 méthodes demandées
 
-```Java
-
-```
+> ```Java
+> 	/**
+> 	 * Cette méthode permet de savoir si l'autotamponneuse est occupée ou non.
+> 	 * @return VRAI si l'autotamponneuse est occupée et FAUX sinon
+> 	 */
+> 	public boolean estOccupee()
+> 	{
+> 		return this.occupee;
+> 	}
+> 	
+> 	/**
+> 	 * Cette méthode permet d'obtenir le nom de l'occupant de l'autotamponeuse.
+> 	 * @return Le nom de l'occupant de l'autotamponneuse
+> 	 */
+> 	public String getNomOccupant()
+> 	{
+> 		return this.nomOccupant;
+> 	}
+> 	
+> 	/**
+> 	 * Cette méthode permet de savoir si l'autotamponneuse est allumée ou non.
+> 	 * @return VRAI si l'autotamponneuse est allumée et FAUX sinon
+> 	 */
+> 	public boolean estAllumee()
+> 	{
+> 		return this.allumee;
+> 	}
+> 	
+> 	/**
+> 	 * Cette méthode permet de savoir si l'autotamponneuse est clignotante ou non.
+> 	 * @return VRAI si l'autotamponneuse est clignotante et FAUX sinon
+> 	 */
+> 	public boolean estClignotante()
+> 	{
+> 		return this.clignotante;
+> 	}
+> ```
 
 - 1#3.2 Pourquoi parle-t-on de "méthodes d'instances" ?
 
