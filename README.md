@@ -751,7 +751,8 @@ Bien prendre en compte le fait que les paramètres peuvent tous les deux avoir u
 
 - 1#9.4 La définition des méthodes de classes pourrait-elle réutiliser celle de la méthode d'instances correspondante ? Si oui, pourquoi ?
 
-> Non car elles ne sont pas `static` et font donc potentiellement appel à des données de l'instance de la classe.
+> Oui, on peut faire appel à une méthode d'instance en l'appelant depuis un des objets instanciés de la méthode de classe.
+> Cependant, on ne peut pas appeler une méthode non `static` de la classe sans passer par un objet instancié car elle fait potentiellement appel à des attributs non `static` de la classe.
 
 1#10. Redéfinissez dans la classe `Autotamponneuse` la méthode de la classe java.lang.Object :
 ```Java
