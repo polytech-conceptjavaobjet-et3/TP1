@@ -14,7 +14,7 @@ Vous allez développer une gestion simple d’autotamponneuses. Celles-ci sont c
 
 1#1. Créez une nouvelle classe Autotamponneuse dans un package com.feteforraine. Ajoutez les données nécessaires à la classe en choisissant les niveaux de visibilité appropriés.
 
-- 1#1.1 classe Autotamponneuse :
+- 1#1.1 classe `Autotamponneuse` :
 
 > La classe est `public`, ce qui veut dire qu'elle est accessible depuis n'importe quel endroit du projet.
 > Les données ne sont visible que depuis la classe, elle sont donc `private`.
@@ -77,9 +77,9 @@ Vous allez développer une gestion simple d’autotamponneuses. Celles-ci sont c
 > - on veut définir manuellement d'autres paramètre (exemple : l'utilisateur peut choisir si l'autotamponeuse est clignotante ou non à sa création)
 
 1#3. Ajoutez des méthodes d’instance dans la classe Autotamponneuse pour consulter l’état d’une
-autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClignotante.
+autotamponneuse particulière : `estOccupee()`, `getNomOccupant()`, `estAllumee()`, `estClignotante()`.
 
-- 1#3.1 méthodes demandées
+- 1#3.1 méthodes demandées :
 
 > ```Java
 > /**
@@ -127,9 +127,9 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 
 > Elles ne contournent pas le principe d'encapsulation des données car elles retournent une copie de la donnée et non la donnée elle-même. Cela signifie qu'elles ne donnent pas l'accès à la donnée mais seulement sa valeur.
 
-1#4. Ajoutez une méthode main dans la classe Autotamponneuse afin de pouvoir définir un programme principal de test. Testez-y sur des exemples le code précedemment défini, et utilisez-la pour tester le code des questions suivantes.
+1#4. Ajoutez une méthode `main()` dans la classe `Autotamponneuse` afin de pouvoir définir un programme principal de test. Testez-y sur des exemples le code précedemment défini, et utilisez-la pour tester le code des questions suivantes.
 
-- 1#4.1 méthode  main
+- 1#4.1 méthode  `main()` :
 
 > ```Java
 > public static void main(String[] args)
@@ -147,7 +147,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > }
 > ```
 
-- 1#4.2 affichage produit par l'exécution de votre méthode  main
+- 1#4.2 affichage produit par l'exécution de votre méthode `main()` :
 
 > ```
 > 
@@ -158,7 +158,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > L'autotamponeuse#1 est-elle clignotante ? false
 > ```
 
-- 1#4.3 méthode main dans une nouvelle classe TestAutotamponneuse dans le package com.feteforraine
+- 1#4.3 méthode `main()` dans une nouvelle classe `TestAutotamponneuse` dans le package `com.feteforraine` :
 
 > ```Java
 > package com.feteforraine;
@@ -181,7 +181,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > }
 > ```
 
-- 1#4.4 Comment faire en sorte d'exécuter la méthode main de la classe com.feteforraine. TestAutotamponneuse ?
+- 1#4.4 Comment faire en sorte d'exécuter la méthode `main()` de la classe com.feteforraine. TestAutotamponneuse ?
 
 > Il faut transmettre la classe `TestAutotamponneuse` à la machine virtuelle Java plutôt que `Autotamponneuse`.
 > 
@@ -191,7 +191,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 
 - 1#4.5 Pourquoi la méthode main est-elle static ? A quoi correspond son paramètre ?
 
-> `main` est le nom de la méthode recherchée par la machine virtuelle Java. Cette méthode est `static` car elle ne doit pas avoir besoin d'un objet instancié pour être appelée. On peut tout à fait définir une méthode `main` dans d'autres classes. Son paramêtre correspond aux paramètres transmis lors de l'appel du programme qui se fait comme suit :
+> `main()` est le nom de la méthode recherchée par la machine virtuelle Java. Cette méthode est `static` car elle ne doit pas avoir besoin d'un objet instancié pour être appelée. On peut tout à fait définir une méthode `main()` dans d'autres classes. Son paramêtre correspond aux paramètres transmis lors de l'appel du programme qui se fait comme suit :
 > 
 > ```
 > java MaClasse paramètre1 paramètre2 ... paramètreN
@@ -199,11 +199,11 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 
 - 1#4.6 Quelles critiques pourriez-vous faire à l'approche consistant à tester le fonctionnement d'une classe au travers d'un programme de test exécuté par sa méthode main ? Quelles autres approches pourrait-on imaginer pour faire cela ?
 
-> Lorsqu'on effectue des tests au sein même de la méthode `main` d'une classe, il peut être fastidieux de trouver la source des erreurs rencontrées. Une alternative consisterait à utiliser des tests unitaires qui permettent notemment de cibler une partie du code pour savoir si celle-ci fonctionne ou pas. Le debogage du programme sera donc plus efficace.
+> Lorsqu'on effectue des tests au sein même de la méthode `main()` d'une classe, il peut être fastidieux de trouver la source des erreurs rencontrées. Une alternative consisterait à utiliser des tests unitaires qui permettent notemment de cibler une partie du code pour savoir si celle-ci fonctionne ou pas. Le debogage du programme sera donc plus efficace.
 
 1#5. Ajoutez le code nécessaire pour qu’une autotamponneuse ait désormais un identifiant entier unique. Cette valeur ne devra pas être choisie par l’utilisateur, et devra commencer à la valeur 1 pour la première autotamponneuse.
 
-- 1#5.1 code ajouté
+- 1#5.1 code ajouté :
 
 > ```Java
 > private static int DERNIER_ID_ATTRIBUE = 0;
@@ -211,7 +211,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > ```
 > `++DERNIER_ID_ATTRIBUE` va incrémenter la valeur de `DERNIER_ID_ATTRIBUE` de 1.
 
-- 1#5.2 test du fonctionnement dans la méthode main
+- 1#5.2 test du fonctionnement dans la méthode `main()` :
 
 > ```Java
 > public static void main(String[] args)
@@ -238,13 +238,13 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > ID de auto2 : 2
 > ```
 
-1#6. Redéfinissez dans la classe Autotamponneuse la méthode particulière suivante de la classe java.lang.Object : String toString() qui retourne une représentation sous forme de chaı̂ne de caractères de l’état d’un objet. Des exemples de chaı̂nes pourraient être :
+1#6. Redéfinissez dans la classe `Autotamponneuse` la méthode particulière suivante de la classe java.lang.Object : `String toString()` qui retourne une représentation sous forme de chaı̂ne de caractères de l’état d’un objet. Des exemples de chaı̂nes pourraient être :
+<br>
+<br> [1] (5.0,5.0) libre éteinte non clignotante
+<br> [2] (7.0,2.0) occupée (Charles Darwin) éteinte non clignotante
+<br> [2] (5.1,5.0) occupée (Charles Darwin) allumée clignotante
 
-[1] (5.0,5.0) libre éteinte non clignotante
-[2] (7.0,2.0) occupée (Charles Darwin) éteinte non clignotante
-[2] (5.1,5.0) occupée (Charles Darwin) allumée clignotante
-
-- 1#6.1 redéfinition de la méthode toString
+- 1#6.1 redéfinition de la méthode `toString()` :
 
 > Pour explicitement redéfinir une méthode, on utilise la balise `@Override`.
 > 
@@ -306,7 +306,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > }
 > ```
 
-- 1#6.2 test du fonctionnement dans la méthode main
+- 1#6.2 test du fonctionnement dans la méthode `main()` :
 
 > ```Java
 > public static void main(String[] args)
@@ -333,9 +333,9 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > Etat de auto2 : [2] (0.0;0.0) libre / eteinte / non clignotante
 > ```
 
-1#7. Ajoutez à présent des méthodes d’instance dans la classe Autotamponneuse pour modifier l’état d’une autotamponneuse particulière, en respectant les règles énoncées ci-dessus : place, ajouteOccupant, enleveOccupant, allume, eteint, demarreClignotement, arreteClignotement. Afin d’informer le programme appelant sur la modification effective ou non de l’objet correspondant, faites retourner à vos méthodes une valeur booléenne. On décide que ces méthodes ne pourront être accessibles qu’aux autres classes du même package (com.feteforraine).
+1#7. Ajoutez à présent des méthodes d’instance dans la classe Autotamponneuse pour modifier l’état d’une autotamponneuse particulière, en respectant les règles énoncées ci-dessus : `place()`, `ajouteOccupant()`, `enleveOccupant()`, `allume()`, `eteint()`, `demarreClignotement()`, `arreteClignotement()`. Afin d’informer le programme appelant sur la modification effective ou non de l’objet correspondant, faites retourner à vos méthodes une valeur booléenne. On décide que ces méthodes ne pourront être accessibles qu’aux autres classes du même package (`com.feteforraine`).
 
-- 1#7.1 définition des méthodes
+- 1#7.1 définition des méthodes :
 
 > ```Java
 > /**
@@ -492,7 +492,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > }
 > ```
 
-- 1#7.2 test du fonctionnement dans la méthode main et trace d'exécution
+- 1#7.2 test du fonctionnement dans la méthode `main()` et trace d'exécution
 
 > ```Java
 > public static void main(String[] args)
@@ -561,7 +561,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > état de auto2 : [2] (0.0;0.0) libre / eteinte / non clignotante
 > ```
 
-- 1#7.3 En créant une classe Test dans le package par défaut, invoquez la méthode ajouteOccupant. Que se passe-t-il, pourquoi ?
+- 1#7.3 En créant une classe `Test` dans le package par défaut, invoquez la méthode `ajouteOccupant()`. Que se passe-t-il, pourquoi ?
 
 > On obtient l'erreur suivante :
 > Exception in thread "main" java.lang.Error: Unresolved compilation problem:
@@ -569,21 +569,24 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 > 
 > La visibilité de la méthode ajouteOccupant étant `protected`, on ne peut y accéder que depuis le même package ou les classes filles.
 
-1#8. On souhaite détecter des collisions entre autotamponneuses. Pour simplifier, on dira que deux autotamponneuses sont en collision si la distance entre leurs positions (comprise ici comme un point dans le plan) est inférieure à une valeur constante définie au niveau de la classe, DISTANCE_MINIMALE. Ajoutez cette valeur de manière appropriée, puis ajoutez une méthode d’instance pour le calcul de distance entre deux autotamponneuses :
-
+1#8. On souhaite détecter des collisions entre autotamponneuses. Pour simplifier, on dira que deux autotamponneuses sont en collision si la distance entre leurs positions (comprise ici comme un point dans le plan) est inférieure à une valeur constante définie au niveau de la classe, `DISTANCE_MINIMALE`. Ajoutez cette valeur de manière appropriée, puis ajoutez une méthode d’instance pour le calcul de distance entre deux autotamponneuses :
+```Java
 double calculeDistance(Autotamponneuse autreAuto)
-
+```
 ainsi qu’une méthode d’instance indiquant si une collision a lieu entre deux autotamponneuses :
-
+```Java
 boolean collision(Autotamponneuse autreAuto)
+```
 
-- 1#8.1 déclaration du champ  DISTANCE MINIMALE
+- 1#8.1 déclaration du champ `DISTANCE MINIMALE` :
 
+> Ici, on peut utiliser le mot-clé `final` car `DISTANCE_MINIMALE` est une constante et ne changera pas durant l'éxécution du programme.
+> 
 > ```Java
 > public static final double DISTANCE_MINIMALE = 2.0d;
 > ```
 
-- 1#8.2 méthode  calculeDistance
+- 1#8.2 méthode `calculeDistance()` :
 
 > ```Java
 > /**
@@ -601,7 +604,7 @@ boolean collision(Autotamponneuse autreAuto)
 > }
 > ```
 
-- 1#8.3 méthode  collision
+- 1#8.3 méthode `collision()` :
 
 > ```Java
 > /**
@@ -620,7 +623,7 @@ boolean collision(Autotamponneuse autreAuto)
 > }
 > ```
 
-- 1#8.4 exemples de tests de collisions dans la classe TestAutotamponneuse
+- 1#8.4 exemples de tests de collisions dans la classe `TestAutotamponneuse` :
 
 > ```Java
 > public static void main(String[] args) 
@@ -658,18 +661,21 @@ boolean collision(Autotamponneuse autreAuto)
 > ```
 
 1#9. Afin d’autoriser d’autres types d'utilisation, proposez des équivalents sous forme de méthodes de classes pour les deux méthodes d’instance précédentes :
-
+```Java
 static double calculeDistance(Autotamponneuse auto1, Autotamponneuse auto2)
+```
 
 et :
-
+```Java
 static boolean collision(Autotamponneuse auto1, Autotamponneuse auto2)
+```
 
-Bien prendre en compte le fait que les paramètres peuvent tous les deux avoir une valeur null à l’exécution.
+Bien prendre en compte le fait que les paramètres peuvent tous les deux avoir une valeur `null` à l’exécution.
 
 
-- 1#9.1 méthode  de classes calculeDistance
+- 1#9.1 méthode de classes `calculeDistance()` :
 
+> Une méthode de classe est une méthode `static`, il faut donc utiliser ce mot-clé lors de la création de la méthode.
 > Dans une méthode de classe, on ne peut pas faire appel à `this`. Il faut donc nécessairement passer deux autotamponeuses en paramètre.
 > 
 > ```Java
@@ -689,7 +695,7 @@ Bien prendre en compte le fait que les paramètres peuvent tous les deux avoir u
 > }
 > ```
 
-- 1#9.2 méthode de classes collision
+- 1#9.2 méthode de classes `collision()`
 
 > ```Java
 > /**
@@ -709,7 +715,7 @@ Bien prendre en compte le fait que les paramètres peuvent tous les deux avoir u
 > }
 > ```
 
-- 1#9.3 exemples de tests de collisions dans la classe TestAutotamponneuse
+- 1#9.3 exemples de tests de collisions dans la classe `TestAutotamponneuse` :
 
 > ```Java
 > public static void main(String[] args) 
@@ -749,13 +755,14 @@ Bien prendre en compte le fait que les paramètres peuvent tous les deux avoir u
 
 > Non car elles ne sont pas `static` et font donc potentiellement appel à des données de l'instance de la classe.
 
-1#10. Redéfinissez dans la classe Autotamponneuse la méthode de la classe java.lang.Object :
-
+1#10. Redéfinissez dans la classe `Autotamponneuse` la méthode de la classe java.lang.Object :
+```Java
 boolean equals(Object autreObjet)
+```
 
 qui indique si deux objets sont égaux (même état complet ici). Attention, la méthode étant déclarée au niveau de la classe java.lang.Object, il faudra vérifier puis transtyper le type du paramètre de la méthode.
 
-- 1#10.1 redéfinition de la méthode  equals
+- 1#10.1 redéfinition de la méthode `equals()` :
 
 > ```Java
 > @Override
@@ -815,7 +822,7 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 > }
 > ```
 
-- 1#10.2 tests d'égalité entre objets dans la classe TestAutotamponneuse
+- 1#10.2 tests d'égalité entre objets dans la classe `TestAutotamponneuse` :
 
 > ```Java
 > public static void main(String[] args) 
@@ -859,9 +866,9 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 > Les autotamponneuses 1 et 2 sont-elles identiques ? true
 > ```
 
-1#11. Ajoutez une nouvelle classe PisteAutotamponneuses dans le package com.feteforraine. Une telle classe comporte une collection d’autotamponneuses représentée par un tableau. Ajoutez-y un constructeur prenant pour paramètre la taille de cette collection.
+1#11. Ajoutez une nouvelle classe `PisteAutotamponneuses` dans le package `com.feteforraine`. Une telle classe comporte une collection d’autotamponneuses représentée par un tableau. Ajoutez-y un constructeur prenant pour paramètre la taille de cette collection.
 
-- 1#11.1 définition de la classe PisteAutotamponneuses
+- 1#11.1 définition de la classe `PisteAutotamponneuses` :
 
 > ```Java
 > package com.feteforraine;
@@ -877,9 +884,9 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 > }
 > ```
 
-1#12. Ajoutez une nouvelle méthode statique main dans la classe PisteAutotamponneuses pour définir un programme de test qui crée le nombre d’autotamponneuses requis et les place de façon aléatoire sur la piste (cf. Math.random()). Faites en sorte qu’aucune autotamponneuse nouvellement placée ne soit en collision avec une autre autotamponneuse.
+1#12. Ajoutez une nouvelle méthode statique main dans la classe `PisteAutotamponneuses` pour définir un programme de test qui crée le nombre d’autotamponneuses requis et les place de façon aléatoire sur la piste (cf. [Math.random()](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#random--)). Faites en sorte qu’aucune autotamponneuse nouvellement placée ne soit en collision avec une autre autotamponneuse.
 
-- 1#12.1 méthode main
+- 1#12.1 méthode `main()` :
 
 > ```Java
 > public static void main(String[] args)
@@ -941,7 +948,7 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 > }
 > ```
 
-- 1#12.2 trace d'exécution de tests de création de piste
+- 1#12.2 trace d'exécution de tests de création de piste :
 
 > ```
 > 
@@ -960,9 +967,9 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 > L'auto#8 a été ajoutée à la piste à la position (6.985950129674232;12.216550384314216)
 > ```
 
-1#13. Redéfinissez la méthode String toString() de la classe PisteAutotamponneuses afin qu’elle affiche l’état de la collection complète (l’ordre des autotamponneuses sera par ordre d’ajout). Utilisez pour cela la classe java.lang.StringBuilder.
+1#13. Redéfinissez la méthode `String toString()` de la classe `PisteAutotamponneuses` afin qu’elle affiche l’état de la collection complète (l’ordre des autotamponneuses sera par ordre d’ajout). Utilisez pour cela la classe [java.lang.StringBuilder](https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html).
 
-- 1#13.1 méthode toString
+- 1#13.1 méthode `toString()` :
 
 > ```Java
 > @Override
@@ -977,7 +984,7 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 > }
 > ```
 
-- 1#13.2 test d'utilisation de la méthode toString
+- 1#13.2 test d'utilisation de la méthode `toString()` :
 
 > ```Java
 > public static void main(String[] args)
@@ -1008,9 +1015,9 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 > [10] (6.985950129674232;12.216550384314216) libre / eteinte / non clignotante
 > ```
 
-1#14. Ajoutez une méthode dereglementAleatoire à la classe PisteAutotamponneuses qui déplace de façon aléatoire et continue chaque autotamponneuse encore pilotée tour à tour, et élimine les autotamponneuses entrées en collision. Cette méthode affichera l’historique des autotamponneuses éliminées, et le vainqueur (autotamponneuse survivante si elle existe).
+1#14. Ajoutez une méthode `dereglementAleatoire()` à la classe `PisteAutotamponneuses` qui déplace de façon aléatoire et continue chaque autotamponneuse encore pilotée tour à tour, et élimine les autotamponneuses entrées en collision. Cette méthode affichera l’historique des autotamponneuses éliminées, et le vainqueur (autotamponneuse survivante si elle existe).
 
-- 1#14.1 méthode dereglementAleatoire
+- 1#14.1 méthode `dereglementAleatoire()` :
 
 > ```Java
 > /**
