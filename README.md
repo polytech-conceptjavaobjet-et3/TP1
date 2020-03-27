@@ -622,7 +622,7 @@ boolean collision(Autotamponneuse autreAuto)
 
 - 1#8.4 exemples de tests de collisions dans la classe TestAutotamponneuse
 
-```Java
+> ```Java
 > public static void main(String[] args) 
 > {
 > 	Autotamponneuse auto1 = new Autotamponneuse();
@@ -817,47 +817,47 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 
 - 1#10.2 tests d'égalité entre objets dans la classe TestAutotamponneuse
 
-```Java
-public static void main(String[] args) 
-{
-	Autotamponneuse auto1 = new Autotamponneuse();
-	Autotamponneuse auto2 = new Autotamponneuse();
-
-	// 1#10.2
-	System.out.println();
-	System.out.println("Question 1#10.2");
-	System.out.println();
-	System.out.println("Je place l'autotamponneuse#1 à la position (2.4,5.6)");
-	auto1.place(2.4f, 5.6f);
-	System.out.println("Je place l'autotamponneuse#2 à la position (2.3,4.1)");
-	auto2.place(2.3f, 4.1f);
-	System.out.println("Les autotamponneuses 1 et 2 sont-elles identiques ? " + auto1.equals(auto2));
-	System.out.println("Je place l'autotamponneuse#1 à la position (1.0,1.0)");
-	auto1.place(1.0f, 1.0f);
-	System.out.println("Je place l'autotamponneuse#2 à la position (1.0,1.0)");
-	auto2.place(1.0f, 1.0f);
-	System.out.println("Les autotamponneuses 1 et 2 sont-elles identiques ? " + auto1.equals(auto2));
-	System.out.println("L'autotamponneuse#1 prend la valeur de l'autotamponneuse#2");
-	auto1 = auto2;
-	System.out.println("Les autotamponneuses 1 et 2 sont-elles identiques ? " + auto1.equals(auto2));
-}
-```
-
-Voici la sortie que l'on obtient :
-
-```
-
-Question 1#10.2
-
-Je place l'autotamponneuse#1 à la position (2.4,5.6)
-Je place l'autotamponneuse#2 à la position (2.3,4.1)
-Les autotamponneuses 1 et 2 sont-elles identiques ? false
-Je place l'autotamponneuse#1 à la position (1.0,1.0)
-Je place l'autotamponneuse#2 à la position (1.0,1.0)
-Les autotamponneuses 1 et 2 sont-elles identiques ? true
-L'autotamponneuse#1 prend la valeur de l'autotamponneuse#2
-Les autotamponneuses 1 et 2 sont-elles identiques ? true
-```
+> ```Java
+> public static void main(String[] args) 
+> {
+> 	Autotamponneuse auto1 = new Autotamponneuse();
+> 	Autotamponneuse auto2 = new Autotamponneuse();
+> 
+> 	// 1#10.2
+> 	System.out.println();
+> 	System.out.println("Question 1#10.2");
+> 	System.out.println();
+> 	System.out.println("Je place l'autotamponneuse#1 à la position (2.4,5.6)");
+> 	auto1.place(2.4f, 5.6f);
+> 	System.out.println("Je place l'autotamponneuse#2 à la position (2.3,4.1)");
+> 	auto2.place(2.3f, 4.1f);
+> 	System.out.println("Les autotamponneuses 1 et 2 sont-elles identiques ? " + auto1.equals(auto2));
+> 	System.out.println("Je place l'autotamponneuse#1 à la position (1.0,1.0)");
+> 	auto1.place(1.0f, 1.0f);
+> 	System.out.println("Je place l'autotamponneuse#2 à la position (1.0,1.0)");
+> 	auto2.place(1.0f, 1.0f);
+> 	System.out.println("Les autotamponneuses 1 et 2 sont-elles identiques ? " + auto1.equals(auto2));
+> 	System.out.println("L'autotamponneuse#1 prend la valeur de l'autotamponneuse#2");
+> 	auto1 = auto2;
+> 	System.out.println("Les autotamponneuses 1 et 2 sont-elles identiques ? " + auto1.equals(auto2));
+> }
+> ```
+> 
+> Voici la sortie que l'on obtient :
+> 
+> ```
+> 
+> Question 1#10.2
+> 
+> Je place l'autotamponneuse#1 à la position (2.4,5.6)
+> Je place l'autotamponneuse#2 à la position (2.3,4.1)
+> Les autotamponneuses 1 et 2 sont-elles identiques ? false
+> Je place l'autotamponneuse#1 à la position (1.0,1.0)
+> Je place l'autotamponneuse#2 à la position (1.0,1.0)
+> Les autotamponneuses 1 et 2 sont-elles identiques ? true
+> L'autotamponneuse#1 prend la valeur de l'autotamponneuse#2
+> Les autotamponneuses 1 et 2 sont-elles identiques ? true
+> ```
 
 1#11. Ajoutez une nouvelle classe PisteAutotamponneuses dans le package com.feteforraine. Une telle classe comporte une collection d’autotamponneuses représentée par un tableau. Ajoutez-y un constructeur prenant pour paramètre la taille de cette collection.
 
@@ -881,7 +881,7 @@ Les autotamponneuses 1 et 2 sont-elles identiques ? true
 
 - 1#12.1 méthode main
 
-```Java
+> ```Java
 > public static void main(String[] args)
 > {
 > 	System.out.println();
@@ -939,12 +939,12 @@ Les autotamponneuses 1 et 2 sont-elles identiques ? true
 > 		}
 > 	}
 > }
-```
+> ```
 
 - 1#12.2 trace d'exécution de tests de création de piste
 
-```
-
+> ```
+> 
 > Question 1#12.2
 > 
 > L'auto#0 a été ajoutée à la piste à la position (14.253948678453835;5.638108439966789)
