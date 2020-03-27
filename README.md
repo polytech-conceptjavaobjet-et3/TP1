@@ -189,7 +189,7 @@ autotamponneuse particulière : `estOccupee()`, `getNomOccupant()`, `estAllumee(
 
 - 1#4.5 Pourquoi la méthode main est-elle static ? A quoi correspond son paramètre ?
 
-> `main()` est le nom de la méthode recherchée par la machine virtuelle Java. Cette méthode est `static` car elle ne doit pas avoir besoin d'un objet instancié pour être appelée. On peut tout à fait définir une méthode `main()` dans d'autres classes. Son paramêtre correspond aux paramètres transmis lors de l'appel du programme qui se fait comme suit :
+> `main()` est le nom de la méthode recherchée par la machine virtuelle Java. Cette méthode est `static` car elle ne doit pas avoir besoin d'un objet instancié pour être appelée. On peut tout à fait définir une méthode `main()` dans d'autres classes. Son paramêtre est à un tableau de chaînes de cartctères qui correspond aux paramètres transmis lors de l'appel du programme qui se fait comme suit :
 > 
 > ```
 > java MaClasse paramètre1 paramètre2 ... paramètreN
@@ -198,6 +198,7 @@ autotamponneuse particulière : `estOccupee()`, `getNomOccupant()`, `estAllumee(
 - 1#4.6 Quelles critiques pourriez-vous faire à l'approche consistant à tester le fonctionnement d'une classe au travers d'un programme de test exécuté par sa méthode main ? Quelles autres approches pourrait-on imaginer pour faire cela ?
 
 > Lorsqu'on effectue des tests au sein même de la méthode `main()` d'une classe, il peut être fastidieux de trouver la source des erreurs rencontrées. Une alternative consisterait à utiliser des tests unitaires qui permettent notemment de cibler une partie du code pour savoir si celle-ci fonctionne ou pas. Le debogage du programme sera donc plus efficace.
+> De plus, cette méthode étant positionnée dans la classe elle-même, les attributs propres à la classe lui sont visibles et il est donc impossible de tester complétement l'encapsulation des données.
 
 1#5. Ajoutez le code nécessaire pour qu’une autotamponneuse ait désormais un identifiant entier unique. Cette valeur ne devra pas être choisie par l’utilisateur, et devra commencer à la valeur 1 pour la première autotamponneuse.
 
