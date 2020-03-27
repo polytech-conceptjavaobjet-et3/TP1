@@ -72,9 +72,7 @@ Vous allez développer une gestion simple d’autotamponneuses. Celles-ci sont c
 
 - 1#2.3 Pour quelles raisons aurait-on intérêt à réutiliser (invoquer) d'autres constructeurs lorsqu'on définit des constructeurs ?
 
-> Cela peut être utile si:
-> - on veut donner des valeurs par défaut à notre Autotamponeuse (exemple : si l'autotamponeuse est occupée, elle est automatiquement clignotante)
-> - on veut définir manuellement d'autres paramètre (exemple : l'utilisateur peut choisir si l'autotamponeuse est clignotante ou non à sa création)
+> Cela peut être utile pour éviter d'avoir des redondances dans le code.
 
 1#3. Ajoutez des méthodes d’instance dans la classe Autotamponneuse pour consulter l’état d’une
 autotamponneuse particulière : `estOccupee()`, `getNomOccupant()`, `estAllumee()`, `estClignotante()`.
