@@ -184,7 +184,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 - 1#4.4 Comment faire en sorte d'exécuter la méthode main de la classe com.feteforraine. TestAutotamponneuse ?
 
 > Il faut transmettre la classe `TestAutotamponneuse` à la machine virtuelle Java plutôt que `Autotamponneuse`.
-
+> 
 > ```
 > java TestAutotamponneuse
 > ```
@@ -207,7 +207,7 @@ autotamponneuse particulière : estOccupee, getNomOccupant, estAllumee, estClign
 
 > ```Java
 > private static int DERNIER_ID_ATTRIBUE = 0;
-> private int	id = ++DERNIER_ID_ATTRIBUE; 
+> private int id = ++DERNIER_ID_ATTRIBUE; 
 > ```
 > `++DERNIER_ID_ATTRIBUE` va incrémenter la valeur de `DERNIER_ID_ATTRIBUE` de 1.
 
