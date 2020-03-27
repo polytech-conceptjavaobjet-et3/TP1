@@ -44,13 +44,13 @@ Vous allez développer une gestion simple d’autotamponneuses. Celles-ci sont c
 > ```Java
 > public Autotamponneuse()
 > {
-> 		this.occupee = false;
-> 		this.allumee = false;
-> 		this.clignotante = false;
-> 		this.placee = false;
-> 		this.position[0] = 0.0d;
-> 		this.position[1] = 0.0d;
-> 		this.nomOccupant = "";
+> 	this.occupee = false;
+> 	this.allumee = false;
+> 	this.clignotante = false;
+> 	this.placee = false;
+> 	this.position[0] = 0.0d;
+> 	this.position[1] = 0.0d;
+> 	this.nomOccupant = "";
 > }
 > ```
 > 
