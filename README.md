@@ -895,7 +895,7 @@ qui indique si deux objets sont égaux (même état complet ici). Attention, la 
 > 	System.out.println("Question#1.12.2");
 > 	System.out.println();
 > 	
-> 	//On crée une piste avec 10 autotamponneuses
+> 	//On crée une piste avec 9 autotamponneuses
 > 	PisteAutotamponneuses piste = new PisteAutotamponneuses(9);
 > 	
 > 	boolean collision = false;
